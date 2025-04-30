@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Todo;
-class TodoController extends Controller
+class TodoController
 {
     public function index()
     {
@@ -25,7 +24,7 @@ class TodoController extends Controller
     {
         return view('todos.create');
     }
-    
+
     public function store()
     {
         $data = request()->validate([
