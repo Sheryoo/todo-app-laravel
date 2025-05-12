@@ -7,7 +7,7 @@ class TodoController
 {
     public function index()
     {
-        $todos = Todo::all();
+        $todos = Todo::paginate(10);
         return view('todos.index', ['todos' => $todos]);
     }
 
